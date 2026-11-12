@@ -128,13 +128,17 @@ footer{border-top:1px solid var(--rule);color:var(--muted);font-size:12px}
         Plastic Greenhouse Index applied to Sentinel-2 winter composites
         (Dec&ndash;Feb), at a locally calibrated threshold of 0.23. Both
         epochs were reprocessed together in September 2026.</p>
-        <p>Accuracy: user&rsquo;s accuracy 84.2% for 2024, from 37 reference
-        points interpreted on high-resolution imagery; Cohen&rsquo;s kappa
-        0.849 for 2018, from 147 independent test points.</p>
+        <p>Accuracy: overall accuracy 92.5% and Cohen&rsquo;s kappa 0.849 for
+        2018, from 147 independent test points. For 2024, an area-weighted
+        overall accuracy of 94.0% and a user&rsquo;s accuracy of 84.2% for the
+        greenhouse class, from 37 reference points interpreted on
+        high-resolution imagery.</p>
         <p>Density is greenhouse-covered area as a share of the agricultural
-        land analysed &mdash; CLC classes 211&ndash;243 from the regional land
-        use map, clipped to the Sentinel-2 study extent. This is smaller than
-        the full municipal territory.</p>
+        land analysed &mdash; CLC classes 211, 221, 222, 223, 241, 242 and 243
+        from the regional land use map, clipped to the eight municipal
+        boundaries. Pastures (CLC 231) are excluded, no plastic application
+        coefficient being defined for them. The 58,738 ha analysed is smaller
+        than the full municipal territory of 91,540 ha.</p>
         <p>Ongoing research. DAFE, University of Basilicata.</p>
       </div>
     </footer>
@@ -167,7 +171,7 @@ var D = [
  {c:"Bernalda",          area:9678.63, d18:141.66, d24:181.63, r18: 1.46, r24: 1.88, s18: 7.23, s24: 7.59, w18:2159.24, w24:2190.31, appri:20.93},
  {c:"Rotondella",        area:4029.34, d18: 63.26, d24: 56.99, r18: 1.57, r24: 1.41, s18: 3.23, s24: 2.38, w18: 926.17, w24: 919.49, appri: 8.25},
  {c:"Nova Siri",         area:3263.21, d18: 31.03, d24: 32.71, r18: 0.95, r24: 1.00, s18: 1.58, s24: 1.37, w18: 711.57, w24: 717.73, appri: 6.91},
- {c:"Montalbano Jonico", area:8507.77, d18: 60.54, d24: 48.25, r18: 0.71, r24: 0.57, s18: 3.09, s24: 2.02, w18:1927.29, w24:1922.78, appri:18.14}
+ {c:"Montalbano Jonico", area:8507.77, d18: 60.54, d24: 48.2, r18: 0.71, r24: 0.57, s18: 3.09, s24: 2.02, w18:1927.29, w24:1922.78, appri:18.14}
 ];
 D.forEach(function(o){ o.chg = o.d24 - o.d18; o.chgp = 100 * o.chg / o.d18; });
 
